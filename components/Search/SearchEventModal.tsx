@@ -1,6 +1,6 @@
 import { IconSearch } from "@tabler/icons-react";
 import { FC, useState } from "react";
-import { useSetRecoilState } from "recoil";
+// import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import useSWR from "swr";
 
@@ -11,7 +11,7 @@ import { FlexColumn, FlexRow } from "@/components/Elements/DisplayFlex";
 import EventCard from "@/components/Events/EventsCard";
 import CircularLoader from "@/components/Loaders/CircularLoader";
 import { useDebounce } from "@/hooks/useDebounce";
-import { notificationState } from "@/store/notification";
+// import { notificationState } from "@/store/notification";
 import { color } from "@/utilities/color";
 
 const SearchIcon = styled(IconSearch)({
@@ -42,8 +42,10 @@ const SearchEventsModal: FC<SearchEventModalProps> = ({
   open,
   handleClose,
 }) => {
-  const setNotification = useSetRecoilState(notificationState);
+  // const setNotification = useSetRecoilState(notificationState);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [limit, setLimit] = useState<number>(10);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [page, setPage] = useState<number>(0);
   const [searchInput, setSearchInput] = useState<string>("");
   const debouncedSearch = useDebounce(searchInput, 1000);
