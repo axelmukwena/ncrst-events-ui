@@ -144,7 +144,7 @@ const SetNewPasswordView: FC = () => {
       });
       setIsSubmitting(false);
       setTimeout(() => {
-        router.push(LocalUrl.SIGN_IN);
+        router.push(LocalUrl.LOG_IN);
       }, 3000);
     } else {
       setNotification({ message: res.message, type: "error" });
