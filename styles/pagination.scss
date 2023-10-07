@@ -1,0 +1,56 @@
+// React Pagination
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-link {
+  padding: 0.375rem 0.75rem;
+  position: relative;
+  display: block;
+  color: #1c2234;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  // background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #313131;
+  border-color: #313131;
+}
+
+.page-item.disabled {
+  display: none;
+}
+
+.page-link:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #525252;
+  border-color: #525252;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: -1px;
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}

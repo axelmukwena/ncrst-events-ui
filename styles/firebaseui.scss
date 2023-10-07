@@ -1,0 +1,65 @@
+.firebaseui-idp-button {
+  height: 50px !important;
+  max-width: 300px !important;
+  border-radius: 4px !important;
+}
+
+.firebaseui-idp-text {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+#firebaseui-auth-container {
+  width: 300px;
+}
+
+.firebaseui-card-content {
+  padding: 0 !important;
+}
+
+form .firebaseui-card-content {
+  padding: 0 24px !important;
+}
+
+.firebaseui-card-header {
+  text-align: center !important;
+}
+
+.firebaseui-title {
+  font-size: 17px;
+  text-align: center !important;
+}
+
+.firebaseui-id-page-federated-linking,
+.firebaseui-id-page-sign-in {
+  box-shadow: none !important;
+  margin: 1em 0 !important;
+  border: 1px solid #cdcdcd !important;
+  border-radius: 4px !important;
+}
+
+.firebaseui-form-actions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 70px !important;
+}
+
+.firebaseui-subtitle {
+  font-size: 16px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.firebaseui-text {
+  font-size: 13px !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+  color: #4b4b4b !important;
+  line-height: 22px !important;
+  margin-bottom: 12px !important;
+}
+
+.firebaseui-button {
+  margin-left: 0 !important;
+}
