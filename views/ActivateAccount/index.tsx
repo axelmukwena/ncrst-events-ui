@@ -2,7 +2,7 @@
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, {
   FC,
@@ -16,7 +16,7 @@ import { useRecoilState } from "recoil";
 import styled from "styled-components";
 import * as Yup from "yup";
 
-import { initAuth } from "@/backend/service/firebase";
+// import { initAuth } from "@/backend/service/firebase";
 import ProfileNoAuthService from "@/backend/service/profile/profileNoAuth.service";
 import {
   ButtonRoundIcon,
@@ -106,7 +106,7 @@ const schema = Yup.object().shape({
 });
 
 const ActivateAccountView: FC = () => {
-  const auth = initAuth();
+  // const auth = initAuth();
   const { currentUser, currentUserLoading } = useCurrentUser();
   const [, setNotification] = useRecoilState(notificationState);
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -177,12 +177,13 @@ const ActivateAccountView: FC = () => {
     e: MouseEvent<HTMLButtonElement>
   ): Promise<void> => {
     e.preventDefault();
-    if (!auth) return;
+    // if (!auth) return;
 
     setIsSubmitting(true);
     try {
-      const provider = new GoogleAuthProvider();
-      const { user } = await signInWithPopup(auth, provider);
+      // const provider = new GoogleAuthProvider();
+      // const { user } = await signInWithPopup(auth, provider);
+      const user = null;
       setIsSubmitting(false);
       if (user) {
         router.push(LocalUrl.HOME);

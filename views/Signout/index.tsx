@@ -3,16 +3,16 @@
 import { useRouter } from "next/navigation";
 import { FC, useEffect } from "react";
 
-import { initAuth } from "@/backend/service/firebase";
+// import { initAuth } from "@/backend/service/firebase";
 import LinearLoader from "@/components/Loaders/LinearLoader";
 import { LocalUrl } from "@/utilities/constants";
 
 const Signout: FC = () => {
   const router = useRouter();
-  const auth = initAuth();
+  // const auth = initAuth();
 
   useEffect(() => {
-    auth.signOut();
+    // auth.signOut();
     router.push(LocalUrl.HOME);
   }, []);
 

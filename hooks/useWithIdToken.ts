@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-
-import { initAuth } from "@/backend/service/firebase";
 
 /**
  * Custom hook with a higher order function to get the id token from the
@@ -13,12 +10,13 @@ const useWithIdToken = (): (<R>(
   asyncCallback: (token: string) => Promise<R>
 ) => Promise<R>) => {
   const [idToken, setIdToken] = useState<string>("");
-  const auth = initAuth();
-  const [user] = useAuthState(auth);
+  // const auth = initAuth();
+  // const [user] = useAuthState(auth);
+  const user = null;
 
   const handleGetIdToken = async (): Promise<void> => {
-    const newToken = await user?.getIdToken();
-    setIdToken(newToken || "");
+    // const newToken = await user?.getIdToken();
+    setIdToken("");
   };
 
   useEffect(() => {
